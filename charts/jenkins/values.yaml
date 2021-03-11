@@ -331,7 +331,10 @@ controller:
   # ref: https://kubernetes.io/docs/concepts/configuration/pod-priority-preemption/
   priorityClassName:
 
-  podAnnotations: {}
+  podAnnotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/path: /prometheus
+    prometheus.io/port: "8080"
   # Add StatefulSet annotations
   statefulSetAnnotations: {}
 
