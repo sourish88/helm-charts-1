@@ -10,4 +10,4 @@ RUN add-apt-repository \
        $(lsb_release -cs) stable"
 RUN apt-get update && apt-get install -y docker-ce-cli
 USER jenkins
-RUN jenkins-plugin-cli --plugins blueocean:1.24.4 kubernetes:1.29.0 workflow-aggregator:2.6 git:4.6.0 configuration-as-code:1.47 docker-plugin:1.2.2 prometheus:2.0.8
+RUN jenkins-plugin-cli --plugins blueocean:1.24.4 kubernetes:1.29.0 workflow-aggregator:2.6 git:4.6.0 configuration-as-code:1.47 docker-plugin:1.2.2 prometheus:2.0.8 influxdb:2.5 github-autostatus:3.6.2
